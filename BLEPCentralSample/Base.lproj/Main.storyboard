@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BLEPCentralSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYY-ir-Xd4">
+                                <rect key="frame" x="0.0" y="40" width="375" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Start Scan"/>
+                                <connections>
+                                    <action selector="startScanPeripheralsButtonDidTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="fS8-BB-RP7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Y-xi-GKW">
+                                <rect key="frame" x="0.0" y="90" width="375" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Stop Scan"/>
+                                <connections>
+                                    <action selector="stopScanPeripheralsButtonDidTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="WE1-yn-KZa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-BN-eQn">
+                                <rect key="frame" x="0.0" y="140" width="375" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel Peripheral"/>
+                                <connections>
+                                    <action selector="cancelPeripheralButtonDidTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0v-np-rSX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ysN-Ef-Fd4">
+                                <rect key="frame" x="0.0" y="190" width="375" height="447"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR6-cj-WRn">
+                                <rect key="frame" x="281" y="637" width="94" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yk5-lb-4OK"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Delete Log"/>
+                                <connections>
+                                    <action selector="deleteLogButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSG-hg-pp1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jYY-ir-Xd4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0kH-T8-N1n"/>
+                            <constraint firstItem="jYY-ir-Xd4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2uL-1u-rya"/>
+                            <constraint firstItem="Wen-BN-eQn" firstAttribute="top" secondItem="E1Y-xi-GKW" secondAttribute="bottom" constant="17" id="5J5-cf-aPE"/>
+                            <constraint firstItem="ysN-Ef-Fd4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5Qk-0D-gOD"/>
+                            <constraint firstItem="bR6-cj-WRn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CLP-Jz-6re"/>
+                            <constraint firstItem="ysN-Ef-Fd4" firstAttribute="top" secondItem="Wen-BN-eQn" secondAttribute="bottom" constant="17" id="N98-rX-KYj"/>
+                            <constraint firstItem="E1Y-xi-GKW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rzd-ld-vmj"/>
+                            <constraint firstItem="bR6-cj-WRn" firstAttribute="top" secondItem="ysN-Ef-Fd4" secondAttribute="bottom" id="Ujg-eL-rJH"/>
+                            <constraint firstItem="jYY-ir-Xd4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vgv-v2-0Hv"/>
+                            <constraint firstItem="bR6-cj-WRn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wzp-So-OvE"/>
+                            <constraint firstItem="Wen-BN-eQn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aj4-x3-x4J"/>
+                            <constraint firstItem="Wen-BN-eQn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bnw-DT-su5"/>
+                            <constraint firstItem="ysN-Ef-Fd4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fmB-Fd-g5N"/>
+                            <constraint firstItem="bR6-cj-WRn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="226" id="hgA-Ie-MYU"/>
+                            <constraint firstItem="E1Y-xi-GKW" firstAttribute="top" secondItem="jYY-ir-Xd4" secondAttribute="bottom" constant="17" id="ksC-6n-09H"/>
+                            <constraint firstItem="E1Y-xi-GKW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mI4-Jd-keb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="logTextView" destination="ysN-Ef-Fd4" id="O2a-nD-ViS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.199999999999999" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
