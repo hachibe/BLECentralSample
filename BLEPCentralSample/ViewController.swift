@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var centralManager: CBCentralManager!
     var connectedPeripheral: CBPeripheral?
     let serviceUUID = CBUUID(string: "0000")
-//    let characteristicUUID = CBUUID(string: "0001")
+    let characteristicUUID = CBUUID(string: "0001")
     
     @IBOutlet weak var logTextView: UITextView!
     
@@ -40,18 +40,22 @@ class ViewController: UIViewController {
     @IBAction func deleteLogButtonTouched() {
         logTextView.text = ""
     }
-    
-    private func appendLog(_ text: String) {
+}
+
+// MARK: - Private Function
+private extension ViewController {
+    func appendLog(_ text: String) {
         print(text)
         logTextView.isScrollEnabled = false
         logTextView.text.append(text + "\n")
         scrollToButtom()
     }
     
-    private func appendSubLog(_ text: String) {
+    func appendSubLog(_ text: String) {
         appendLog("  " + text)
     }
-    private func scrollToButtom() {
+    
+    func scrollToButtom() {
         logTextView.selectedRange = NSRange(location: logTextView.text.count, length: 0)
         logTextView.isScrollEnabled = true
         
@@ -116,7 +120,9 @@ extension ViewController: CBPeripheralDelegate {
         }
         for service in services {
             appendSubLog("service: \(service)")
-            peripheral.discoverCharacteristics([serviceUUID], for: service)
+            if service.uuid.isEqual(serviceUUID) {
+                peripheral.discoverCharacteristics(nil, for: service)
+            }
         }
     }
     
@@ -145,7 +151,16 @@ extension ViewController: CBPeripheralDelegate {
             appendSubLog("error: \(String(describing: error))\n")
             return
         }
-        appendSubLog("success\n")
+        guard let characteristics = service.characteristics else {
+            appendSubLog("no characteristics\n")
+            return
+        }
+        for characteristic in characteristics {
+            appendSubLog("properties: \(characteristic.properties)")
+            if characteristic.uuid.isEqual(characteristicUUID) {
+                peripheral.readValue(for: characteristic)
+            }
+        }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
@@ -154,8 +169,13 @@ extension ViewController: CBPeripheralDelegate {
             appendSubLog(" error: \(String(describing: error))\n")
             return
         }
+        
         appendSubLog("service.uuid: \(characteristic.service.uuid)")
         appendSubLog("characteristic.uuid: \(characteristic.uuid)")
         appendSubLog("value: \(String(describing: characteristic.value))\n")
+        if let data = characteristic.value {
+            let valueString = String(data: data, encoding: .utf8)
+            appendSubLog("valueString: \(String(describing: valueString))\n")
+        }
     }
 }
