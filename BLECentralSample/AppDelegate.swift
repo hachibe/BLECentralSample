@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  BLEPCentralSample
+//  BLECentralSample
 //
 //  Created by Hachibe on 2017/11/30.
 //  Copyright © 2017年 Masanori. All rights reserved.

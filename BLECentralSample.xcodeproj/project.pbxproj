@@ -15,14 +15,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C333D351FCFF10600DB88E3 /* BLEPCentralSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEPCentralSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C333D351FCFF10600DB88E3 /* BLECentralSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLECentralSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C333D381FCFF10600DB88E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C333D3A1FCFF10600DB88E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C333D3D1FCFF10600DB88E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C333D3F1FCFF10600DB88E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C333D421FCFF10600DB88E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C333D441FCFF10600DB88E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C333D511FCFF6CA00DB88E3 /* BLEPCentralSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLEPCentralSample.entitlements; sourceTree = "<group>"; };
+		8C333D511FCFF6CA00DB88E3 /* BLECentralSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLECentralSample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 		8C333D2C1FCFF10600DB88E3 = {
 			isa = PBXGroup;
 			children = (
-				8C333D371FCFF10600DB88E3 /* BLEPCentralSample */,
+				8C333D371FCFF10600DB88E3 /* BLECentralSample */,
 				8C333D361FCFF10600DB88E3 /* Products */,
 				8C333D4E1FCFF6CA00DB88E3 /* Frameworks */,
 			);
@@ -48,15 +48,15 @@
 		8C333D361FCFF10600DB88E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C333D351FCFF10600DB88E3 /* BLEPCentralSample.app */,
+				8C333D351FCFF10600DB88E3 /* BLECentralSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C333D371FCFF10600DB88E3 /* BLEPCentralSample */ = {
+		8C333D371FCFF10600DB88E3 /* BLECentralSample */ = {
 			isa = PBXGroup;
 			children = (
-				8C333D511FCFF6CA00DB88E3 /* BLEPCentralSample.entitlements */,
+				8C333D511FCFF6CA00DB88E3 /* BLECentralSample.entitlements */,
 				8C333D381FCFF10600DB88E3 /* AppDelegate.swift */,
 				8C333D3A1FCFF10600DB88E3 /* ViewController.swift */,
 				8C333D3C1FCFF10600DB88E3 /* Main.storyboard */,
@@ -64,7 +64,7 @@
 				8C333D411FCFF10600DB88E3 /* LaunchScreen.storyboard */,
 				8C333D441FCFF10600DB88E3 /* Info.plist */,
 			);
-			path = BLEPCentralSample;
+			path = BLECentralSample;
 			sourceTree = "<group>";
 		};
 		8C333D4E1FCFF6CA00DB88E3 /* Frameworks */ = {
@@ -77,9 +77,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C333D341FCFF10600DB88E3 /* BLEPCentralSample */ = {
+		8C333D341FCFF10600DB88E3 /* BLECentralSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C333D471FCFF10600DB88E3 /* Build configuration list for PBXNativeTarget "BLEPCentralSample" */;
+			buildConfigurationList = 8C333D471FCFF10600DB88E3 /* Build configuration list for PBXNativeTarget "BLECentralSample" */;
 			buildPhases = (
 				8C333D311FCFF10600DB88E3 /* Sources */,
 				8C333D321FCFF10600DB88E3 /* Frameworks */,
@@ -89,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = BLEPCentralSample;
-			productName = BLEPCentralSample;
-			productReference = 8C333D351FCFF10600DB88E3 /* BLEPCentralSample.app */;
+			name = BLECentralSample;
+			productName = BLECentralSample;
+			productReference = 8C333D351FCFF10600DB88E3 /* BLECentralSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8C333D301FCFF10600DB88E3 /* Build configuration list for PBXProject "BLEPCentralSample" */;
+			buildConfigurationList = 8C333D301FCFF10600DB88E3 /* Build configuration list for PBXProject "BLECentralSample" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C333D341FCFF10600DB88E3 /* BLEPCentralSample */,
+				8C333D341FCFF10600DB88E3 /* BLECentralSample */,
 			);
 		};
 /* End PBXProject section */
@@ -294,9 +294,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86X6H2M6HT;
-				INFOPLIST_FILE = BLEPCentralSample/Info.plist;
+				INFOPLIST_FILE = BLECentralSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.BLEPCentralSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BLECentralSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,9 +309,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86X6H2M6HT;
-				INFOPLIST_FILE = BLEPCentralSample/Info.plist;
+				INFOPLIST_FILE = BLECentralSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.BLEPCentralSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BLECentralSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C333D301FCFF10600DB88E3 /* Build configuration list for PBXProject "BLEPCentralSample" */ = {
+		8C333D301FCFF10600DB88E3 /* Build configuration list for PBXProject "BLECentralSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C333D451FCFF10600DB88E3 /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C333D471FCFF10600DB88E3 /* Build configuration list for PBXNativeTarget "BLEPCentralSample" */ = {
+		8C333D471FCFF10600DB88E3 /* Build configuration list for PBXNativeTarget "BLECentralSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C333D481FCFF10600DB88E3 /* Debug */,
